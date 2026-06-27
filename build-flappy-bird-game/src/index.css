@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Bird wing flap */
+@keyframes wingFlap {
+  0%,
+  100% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(24deg);
+  }
+}
+
+.bird-wing {
+  animation: wingFlap 0.42s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 38% 26%;
+}
+
+.bird-wing-slow {
+  animation-duration: 1.3s;
+}
+
+/* Gentle floating */
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 2.6s ease-in-out infinite;
+}
+
+/* Cloud drift */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(16px);
+  }
+}
+
+.animate-drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+/* Pop-in for cards / overlays */
+@keyframes pop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop {
+  animation: pop 0.25s ease-out;
+}
+
+/* Pulsing glow on the Play button */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 8px 0 #b45309, 0 12px 18px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 0 8px 0 #b45309, 0 16px 30px rgba(245, 158, 11, 0.55);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 1.6s ease-in-out infinite;
+}
